@@ -14,8 +14,8 @@ jobs:
             matrix:
                 python-version: ['2.7']
         env:
-            FLAKE8_VERSION="<=3.5.0"
-            FLAKE8_CONFIG=".flake8"
+            FLAKE8_VERSION: "<=3.5.0"
+            FLAKE8_CONFIG: ".flake8"
         steps:
             # Checkout the source code
             - name: Checkout Pilot2 repo
