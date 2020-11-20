@@ -44,6 +44,6 @@ jobs:
             - name: Run flake8
               run: flake8 --config ${{ env.FLAKE8_CONFIG}} pilot.py pilot/
 
-            # Run the tests
-            # - name: Run unit tests
-            # run: unit2 -v
+            Run the tests
+            - name: Run unit tests
+              run: unit2 -v
