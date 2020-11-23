@@ -1,11 +1,9 @@
 name: unit-tests-workflow
 on:
-    push:
-        branches:
-            master
     pull_request:
         branches:
-            master
+            - master
+            - next
 jobs:
     run-unit-tests:
         name: "Run unit tests"
