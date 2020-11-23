@@ -28,12 +28,9 @@ jobs:
                 python-version: ${{ matrix.python-version }}
                 architecture: x64
 
-            - name: Check pip
-              run: which pip
-
             # Pip install
             - name: Pip install
-              run: pip install unittest2 flake8${{ env.FLAKE8_VERSION }} pep8-naming flake8-blind-except
+              run: pip install unittest2 "flake8${{ env.FLAKE8_VERSION }}" pep8-naming flake8-blind-except
 
             # Prep
             - name: Setup env
