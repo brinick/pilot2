@@ -1,0 +1,20 @@
+name: build-docs-workflow
+on:
+    pull_request:
+        branches:
+            - master
+jobs:
+    build-docs:
+        name: "Build Sphinx docs"
+        runs-on: ubuntu-latest
+        steps:
+            # Checkout the source code
+            - name: Checkout Pilot2 repo
+              uses: actions/checkout@v2
+
+            - name: Pip install
+              run: pip install sphinx
+
+            - name: Run make
+              run: cd ./doc && make html
+
