@@ -1,6 +1,6 @@
 name: build-docs-workflow
 on:
-    pull_request:
+    push:
         branches:
             - master
 jobs:
@@ -29,5 +29,8 @@ jobs:
               run: python -c "import sphinx;print(sphinx.__version__)"
 
             - name: Create html docs
-              run: cd ./doc && make html
+              run: cd ./doc && make github
+
+            - name: Commit changes
+              run: git add docs && git commit -m "Adding documentation" && git push origin master
 
