@@ -1,0 +1,917 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>errorcodes &#8212; Pilot 2  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="exception" href="exception.html" />
+    <link rel="prev" title="common components" href="index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pilot.common.errorcodes">
+<span id="errorcodes"></span><h1>errorcodes<a class="headerlink" href="#module-pilot.common.errorcodes" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="pilot.common.errorcodes.ErrorCodes">
+<em class="property">class </em><code class="sig-prename descclassname">pilot.common.errorcodes.</code><code class="sig-name descname">ErrorCodes</code><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pilot error codes.</p>
+<p>Note: Error code numbering is the same as in Pilot 1 since that is expected by the PanDA server and monitor.
+Note 2: Add error codes as they are needed in other modules. Do not import the full Pilot 1 list at once as there
+might very well be codes that can be reassigned/removed.</p>
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.ATLASSETUPFATAL">
+<code class="sig-name descname">ATLASSETUPFATAL</code><em class="property"> = 1334</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.ATLASSETUPFATAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.BADALLOC">
+<code class="sig-name descname">BADALLOC</code><em class="property"> = 1223</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.BADALLOC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.BADMEMORYMONITORJSON">
+<code class="sig-name descname">BADMEMORYMONITORJSON</code><em class="property"> = 1337</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.BADMEMORYMONITORJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.BADQUEUECONFIGURATION">
+<code class="sig-name descname">BADQUEUECONFIGURATION</code><em class="property"> = 1341</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.BADQUEUECONFIGURATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.BADXML">
+<code class="sig-name descname">BADXML</code><em class="property"> = 1247</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.BADXML" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.BLACKHOLE">
+<code class="sig-name descname">BLACKHOLE</code><em class="property"> = 1332</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.BLACKHOLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.CHKSUMNOTSUP">
+<code class="sig-name descname">CHKSUMNOTSUP</code><em class="property"> = 1242</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.CHKSUMNOTSUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.CHMODTRF">
+<code class="sig-name descname">CHMODTRF</code><em class="property"> = 1143</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.CHMODTRF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.COMMUNICATIONFAILURE">
+<code class="sig-name descname">COMMUNICATIONFAILURE</code><em class="property"> = 1318</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.COMMUNICATIONFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.CONVERSIONFAILURE">
+<code class="sig-name descname">CONVERSIONFAILURE</code><em class="property"> = 1302</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.CONVERSIONFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.COREDUMP">
+<code class="sig-name descname">COREDUMP</code><em class="property"> = 1355</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.COREDUMP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.DBRELEASEFAILURE">
+<code class="sig-name descname">DBRELEASEFAILURE</code><em class="property"> = 1339</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.DBRELEASEFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.EMPTYOUTPUTFILE">
+<code class="sig-name descname">EMPTYOUTPUTFILE</code><em class="property"> = 1350</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.EMPTYOUTPUTFILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.ESFATAL">
+<code class="sig-name descname">ESFATAL</code><em class="property"> = 1228</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.ESFATAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.ESNOEVENTS">
+<code class="sig-name descname">ESNOEVENTS</code><em class="property"> = 1238</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.ESNOEVENTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.ESRECOVERABLE">
+<code class="sig-name descname">ESRECOVERABLE</code><em class="property"> = 1224</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.ESRECOVERABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.EXCEEDEDMAXWAITTIME">
+<code class="sig-name descname">EXCEEDEDMAXWAITTIME</code><em class="property"> = 1317</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.EXCEEDEDMAXWAITTIME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.EXECUTEDCLONEJOB">
+<code class="sig-name descname">EXECUTEDCLONEJOB</code><em class="property"> = 1234</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.EXECUTEDCLONEJOB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.FAILEDBYSERVER">
+<code class="sig-name descname">FAILEDBYSERVER</code><em class="property"> = 1236</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.FAILEDBYSERVER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.FILEEXISTS">
+<code class="sig-name descname">FILEEXISTS</code><em class="property"> = 1221</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.FILEEXISTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.FILEHANDLINGFAILURE">
+<code class="sig-name descname">FILEHANDLINGFAILURE</code><em class="property"> = 1303</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.FILEHANDLINGFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.GENERALCPUCALCPROBLEM">
+<code class="sig-name descname">GENERALCPUCALCPROBLEM</code><em class="property"> = 1354</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.GENERALCPUCALCPROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.GENERALERROR">
+<code class="sig-name descname">GENERALERROR</code><em class="property"> = 1008</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.GENERALERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.GETADMISMATCH">
+<code class="sig-name descname">GETADMISMATCH</code><em class="property"> = 1171</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.GETADMISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.GETGLOBUSSYSERR">
+<code class="sig-name descname">GETGLOBUSSYSERR</code><em class="property"> = 1180</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.GETGLOBUSSYSERR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.GETMD5MISMATCH">
+<code class="sig-name descname">GETMD5MISMATCH</code><em class="property"> = 1145</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.GETMD5MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.IMAGENOTFOUND">
+<code class="sig-name descname">IMAGENOTFOUND</code><em class="property"> = 1360</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.IMAGENOTFOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.INTERNALPILOTPROBLEM">
+<code class="sig-name descname">INTERNALPILOTPROBLEM</code><em class="property"> = 1319</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.INTERNALPILOTPROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.JOBALREADYRUNNING">
+<code class="sig-name descname">JOBALREADYRUNNING</code><em class="property"> = 1336</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.JOBALREADYRUNNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.JSONRETRIEVALTIMEOUT">
+<code class="sig-name descname">JSONRETRIEVALTIMEOUT</code><em class="property"> = 1330</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.JSONRETRIEVALTIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.KILLSIGNAL">
+<code class="sig-name descname">KILLSIGNAL</code><em class="property"> = 1200</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.KILLSIGNAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.LFNTOOLONG">
+<code class="sig-name descname">LFNTOOLONG</code><em class="property"> = 1190</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.LFNTOOLONG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.LOGFILECREATIONFAILURE">
+<code class="sig-name descname">LOGFILECREATIONFAILURE</code><em class="property"> = 1320</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.LOGFILECREATIONFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.LOOPINGJOB">
+<code class="sig-name descname">LOOPINGJOB</code><em class="property"> = 1150</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.LOOPINGJOB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.MESSAGEHANDLINGFAILURE">
+<code class="sig-name descname">MESSAGEHANDLINGFAILURE</code><em class="property"> = 1240</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.MESSAGEHANDLINGFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.MIDDLEWAREIMPORTFAILURE">
+<code class="sig-name descname">MIDDLEWAREIMPORTFAILURE</code><em class="property"> = 1342</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.MIDDLEWAREIMPORTFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.MISSINGINPUTFILE">
+<code class="sig-name descname">MISSINGINPUTFILE</code><em class="property"> = 1331</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.MISSINGINPUTFILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.MISSINGINSTALLATION">
+<code class="sig-name descname">MISSINGINSTALLATION</code><em class="property"> = 1211</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.MISSINGINSTALLATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.MISSINGOUTPUTFILE">
+<code class="sig-name descname">MISSINGOUTPUTFILE</code><em class="property"> = 1165</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.MISSINGOUTPUTFILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.MISSINGRELEASEUNPACKED">
+<code class="sig-name descname">MISSINGRELEASEUNPACKED</code><em class="property"> = 1358</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.MISSINGRELEASEUNPACKED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.MISSINGUSERCODE">
+<code class="sig-name descname">MISSINGUSERCODE</code><em class="property"> = 1335</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.MISSINGUSERCODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.MKDIR">
+<code class="sig-name descname">MKDIR</code><em class="property"> = 1199</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.MKDIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NFSSQLITE">
+<code class="sig-name descname">NFSSQLITE</code><em class="property"> = 1115</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NFSSQLITE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOLOCALSPACE">
+<code class="sig-name descname">NOLOCALSPACE</code><em class="property"> = 1098</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOLOCALSPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NONDETERMINISTICDDM">
+<code class="sig-name descname">NONDETERMINISTICDDM</code><em class="property"> = 1329</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NONDETERMINISTICDDM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOOUTPUTINJOBREPORT">
+<code class="sig-name descname">NOOUTPUTINJOBREPORT</code><em class="property"> = 1343</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOOUTPUTINJOBREPORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOPAYLOADMETADATA">
+<code class="sig-name descname">NOPAYLOADMETADATA</code><em class="property"> = 1187</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOPAYLOADMETADATA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOPROXY">
+<code class="sig-name descname">NOPROXY</code><em class="property"> = 1163</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOPROXY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NORELEASEFOUND">
+<code class="sig-name descname">NORELEASEFOUND</code><em class="property"> = 1244</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NORELEASEFOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOREMOTESPACE">
+<code class="sig-name descname">NOREMOTESPACE</code><em class="property"> = 1333</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOREMOTESPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOREPLICAS">
+<code class="sig-name descname">NOREPLICAS</code><em class="property"> = 1326</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOREPLICAS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOSOFTWAREDIR">
+<code class="sig-name descname">NOSOFTWAREDIR</code><em class="property"> = 1186</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOSOFTWAREDIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOSTORAGE">
+<code class="sig-name descname">NOSTORAGE</code><em class="property"> = 1133</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOSTORAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOSTORAGEPROTOCOL">
+<code class="sig-name descname">NOSTORAGEPROTOCOL</code><em class="property"> = 1313</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOSTORAGEPROTOCOL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOSUCHFILE">
+<code class="sig-name descname">NOSUCHFILE</code><em class="property"> = 1103</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOSUCHFILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOSUCHPROCESS">
+<code class="sig-name descname">NOSUCHPROCESS</code><em class="property"> = 1353</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOSUCHPROCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOTDEFINED">
+<code class="sig-name descname">NOTDEFINED</code><em class="property"> = 1311</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOTDEFINED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOTIMPLEMENTED">
+<code class="sig-name descname">NOTIMPLEMENTED</code><em class="property"> = 1300</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOTIMPLEMENTED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOTSAMELENGTH">
+<code class="sig-name descname">NOTSAMELENGTH</code><em class="property"> = 1312</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOTSAMELENGTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOUSERTARBALL">
+<code class="sig-name descname">NOUSERTARBALL</code><em class="property"> = 1246</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOUSERTARBALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.NOVOMSPROXY">
+<code class="sig-name descname">NOVOMSPROXY</code><em class="property"> = 1177</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.NOVOMSPROXY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.OUTPUTFILETOOLARGE">
+<code class="sig-name descname">OUTPUTFILETOOLARGE</code><em class="property"> = 1124</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.OUTPUTFILETOOLARGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PANDAKILL">
+<code class="sig-name descname">PANDAKILL</code><em class="property"> = 1144</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PANDAKILL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PANDAQUEUENOTACTIVE">
+<code class="sig-name descname">PANDAQUEUENOTACTIVE</code><em class="property"> = 1359</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PANDAQUEUENOTACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PAYLOADEXCEEDMAXMEM">
+<code class="sig-name descname">PAYLOADEXCEEDMAXMEM</code><em class="property"> = 1235</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PAYLOADEXCEEDMAXMEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PAYLOADEXECUTIONEXCEPTION">
+<code class="sig-name descname">PAYLOADEXECUTIONEXCEPTION</code><em class="property"> = 1310</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PAYLOADEXECUTIONEXCEPTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PAYLOADEXECUTIONFAILURE">
+<code class="sig-name descname">PAYLOADEXECUTIONFAILURE</code><em class="property"> = 1305</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PAYLOADEXECUTIONFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PAYLOADOUTOFMEMORY">
+<code class="sig-name descname">PAYLOADOUTOFMEMORY</code><em class="property"> = 1212</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PAYLOADOUTOFMEMORY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PAYLOADSIGSEGV">
+<code class="sig-name descname">PAYLOADSIGSEGV</code><em class="property"> = 1328</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PAYLOADSIGSEGV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.POSTPROCESSFAILURE">
+<code class="sig-name descname">POSTPROCESSFAILURE</code><em class="property"> = 1357</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.POSTPROCESSFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PREPROCESSFAILURE">
+<code class="sig-name descname">PREPROCESSFAILURE</code><em class="property"> = 1356</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PREPROCESSFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PUTADMISMATCH">
+<code class="sig-name descname">PUTADMISMATCH</code><em class="property"> = 1172</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PUTADMISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PUTGLOBUSSYSERR">
+<code class="sig-name descname">PUTGLOBUSSYSERR</code><em class="property"> = 1181</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PUTGLOBUSSYSERR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.PUTMD5MISMATCH">
+<code class="sig-name descname">PUTMD5MISMATCH</code><em class="property"> = 1141</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.PUTMD5MISMATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.QUEUEDATA">
+<code class="sig-name descname">QUEUEDATA</code><em class="property"> = 1116</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.QUEUEDATA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.QUEUEDATANOTOK">
+<code class="sig-name descname">QUEUEDATANOTOK</code><em class="property"> = 1117</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.QUEUEDATANOTOK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.REACHEDMAXTIME">
+<code class="sig-name descname">REACHEDMAXTIME</code><em class="property"> = 1213</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.REACHEDMAXTIME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.REMOTEFILECOULDNOTBEOPENED">
+<code class="sig-name descname">REMOTEFILECOULDNOTBEOPENED</code><em class="property"> = 1361</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.REMOTEFILECOULDNOTBEOPENED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.REPLICANOTFOUND">
+<code class="sig-name descname">REPLICANOTFOUND</code><em class="property"> = 1100</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.REPLICANOTFOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.RESOURCEUNAVAILABLE">
+<code class="sig-name descname">RESOURCEUNAVAILABLE</code><em class="property"> = 1344</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.RESOURCEUNAVAILABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.RUCIOLISTREPLICASFAILED">
+<code class="sig-name descname">RUCIOLISTREPLICASFAILED</code><em class="property"> = 1322</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.RUCIOLISTREPLICASFAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.RUCIOLOCATIONFAILED">
+<code class="sig-name descname">RUCIOLOCATIONFAILED</code><em class="property"> = 1321</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.RUCIOLOCATIONFAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.RUCIOSERVICEUNAVAILABLE">
+<code class="sig-name descname">RUCIOSERVICEUNAVAILABLE</code><em class="property"> = 1316</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.RUCIOSERVICEUNAVAILABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SERVICENOTAVAILABLE">
+<code class="sig-name descname">SERVICENOTAVAILABLE</code><em class="property"> = 1324</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SERVICENOTAVAILABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SETUPFAILURE">
+<code class="sig-name descname">SETUPFAILURE</code><em class="property"> = 1110</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SETUPFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SIGBUS">
+<code class="sig-name descname">SIGBUS</code><em class="property"> = 1206</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SIGBUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SIGQUIT">
+<code class="sig-name descname">SIGQUIT</code><em class="property"> = 1202</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SIGQUIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SIGSEGV">
+<code class="sig-name descname">SIGSEGV</code><em class="property"> = 1203</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SIGSEGV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SIGTERM">
+<code class="sig-name descname">SIGTERM</code><em class="property"> = 1201</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SIGTERM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SIGUSR1">
+<code class="sig-name descname">SIGUSR1</code><em class="property"> = 1207</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SIGUSR1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SIGXCPU">
+<code class="sig-name descname">SIGXCPU</code><em class="property"> = 1204</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SIGXCPU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SINGULARITYBINDPOINTFAILURE">
+<code class="sig-name descname">SINGULARITYBINDPOINTFAILURE</code><em class="property"> = 1308</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SINGULARITYBINDPOINTFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SINGULARITYFAILEDUSERNAMESPACE">
+<code class="sig-name descname">SINGULARITYFAILEDUSERNAMESPACE</code><em class="property"> = 1345</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SINGULARITYFAILEDUSERNAMESPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SINGULARITYGENERALFAILURE">
+<code class="sig-name descname">SINGULARITYGENERALFAILURE</code><em class="property"> = 1306</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SINGULARITYGENERALFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SINGULARITYIMAGEMOUNTFAILURE">
+<code class="sig-name descname">SINGULARITYIMAGEMOUNTFAILURE</code><em class="property"> = 1309</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SINGULARITYIMAGEMOUNTFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SINGULARITYNEWUSERNAMESPACE">
+<code class="sig-name descname">SINGULARITYNEWUSERNAMESPACE</code><em class="property"> = 1340</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SINGULARITYNEWUSERNAMESPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SINGULARITYNOLOOPDEVICES">
+<code class="sig-name descname">SINGULARITYNOLOOPDEVICES</code><em class="property"> = 1307</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SINGULARITYNOLOOPDEVICES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SINGULARITYNOTINSTALLED">
+<code class="sig-name descname">SINGULARITYNOTINSTALLED</code><em class="property"> = 1325</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SINGULARITYNOTINSTALLED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SINGULARITYRESOURCEUNAVAILABLE">
+<code class="sig-name descname">SINGULARITYRESOURCEUNAVAILABLE</code><em class="property"> = 1348</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SINGULARITYRESOURCEUNAVAILABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.SIZETOOLARGE">
+<code class="sig-name descname">SIZETOOLARGE</code><em class="property"> = 1168</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.SIZETOOLARGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.STAGEINAUTHENTICATIONFAILURE">
+<code class="sig-name descname">STAGEINAUTHENTICATIONFAILURE</code><em class="property"> = 1338</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.STAGEINAUTHENTICATIONFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.STAGEINFAILED">
+<code class="sig-name descname">STAGEINFAILED</code><em class="property"> = 1099</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.STAGEINFAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.STAGEINTIMEOUT">
+<code class="sig-name descname">STAGEINTIMEOUT</code><em class="property"> = 1151</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.STAGEINTIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.STAGEOUTFAILED">
+<code class="sig-name descname">STAGEOUTFAILED</code><em class="property"> = 1137</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.STAGEOUTFAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.STAGEOUTTIMEOUT">
+<code class="sig-name descname">STAGEOUTTIMEOUT</code><em class="property"> = 1152</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.STAGEOUTTIMEOUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.STATFILEPROBLEM">
+<code class="sig-name descname">STATFILEPROBLEM</code><em class="property"> = 1352</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.STATFILEPROBLEM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.STDOUTTOOBIG">
+<code class="sig-name descname">STDOUTTOOBIG</code><em class="property"> = 1106</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.STDOUTTOOBIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.TRANSFORMNOTFOUND">
+<code class="sig-name descname">TRANSFORMNOTFOUND</code><em class="property"> = 1346</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.TRANSFORMNOTFOUND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.TRFDOWNLOADFAILURE">
+<code class="sig-name descname">TRFDOWNLOADFAILURE</code><em class="property"> = 1149</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.TRFDOWNLOADFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.UNKNOWNCHECKSUMTYPE">
+<code class="sig-name descname">UNKNOWNCHECKSUMTYPE</code><em class="property"> = 1314</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.UNKNOWNCHECKSUMTYPE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.UNKNOWNCOPYTOOL">
+<code class="sig-name descname">UNKNOWNCOPYTOOL</code><em class="property"> = 1323</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.UNKNOWNCOPYTOOL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.UNKNOWNEXCEPTION">
+<code class="sig-name descname">UNKNOWNEXCEPTION</code><em class="property"> = 1301</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.UNKNOWNEXCEPTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.UNKNOWNPAYLOADFAILURE">
+<code class="sig-name descname">UNKNOWNPAYLOADFAILURE</code><em class="property"> = 1220</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.UNKNOWNPAYLOADFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.UNKNOWNTRFFAILURE">
+<code class="sig-name descname">UNKNOWNTRFFAILURE</code><em class="property"> = 1315</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.UNKNOWNTRFFAILURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.UNREACHABLENETWORK">
+<code class="sig-name descname">UNREACHABLENETWORK</code><em class="property"> = 1327</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.UNREACHABLENETWORK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.UNRECOGNIZEDTRFARGUMENTS">
+<code class="sig-name descname">UNRECOGNIZEDTRFARGUMENTS</code><em class="property"> = 1349</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.UNRECOGNIZEDTRFARGUMENTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.UNRECOGNIZEDTRFSTDERR">
+<code class="sig-name descname">UNRECOGNIZEDTRFSTDERR</code><em class="property"> = 1351</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.UNRECOGNIZEDTRFSTDERR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.UNSUPPORTEDSL5OS">
+<code class="sig-name descname">UNSUPPORTEDSL5OS</code><em class="property"> = 1347</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.UNSUPPORTEDSL5OS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.USERDIRTOOLARGE">
+<code class="sig-name descname">USERDIRTOOLARGE</code><em class="property"> = 1104</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.USERDIRTOOLARGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.USERKILL">
+<code class="sig-name descname">USERKILL</code><em class="property"> = 1205</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.USERKILL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.XRDCPERROR">
+<code class="sig-name descname">XRDCPERROR</code><em class="property"> = 1362</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.XRDCPERROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.ZEROFILESIZE">
+<code class="sig-name descname">ZEROFILESIZE</code><em class="property"> = 1191</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.ZEROFILESIZE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.__dict__">
+<code class="sig-name descname">__dict__</code><em class="property"> = mappingproxy({'__module__': 'pilot.common.errorcodes', '__doc__': '\n    Pilot error codes.\n\n    Note: Error code numbering is the same as in Pilot 1 since that is expected by the PanDA server and monitor.\n    Note 2: Add error codes as they are needed in other modules. Do not import the full Pilot 1 list at once as there\n    might very well be codes that can be reassigned/removed.\n    ', 'GENERALERROR': 1008, 'NOLOCALSPACE': 1098, 'STAGEINFAILED': 1099, 'REPLICANOTFOUND': 1100, 'NOSUCHFILE': 1103, 'USERDIRTOOLARGE': 1104, 'STDOUTTOOBIG': 1106, 'SETUPFAILURE': 1110, 'NFSSQLITE': 1115, 'QUEUEDATA': 1116, 'QUEUEDATANOTOK': 1117, 'OUTPUTFILETOOLARGE': 1124, 'NOSTORAGE': 1133, 'STAGEOUTFAILED': 1137, 'PUTMD5MISMATCH': 1141, 'CHMODTRF': 1143, 'PANDAKILL': 1144, 'GETMD5MISMATCH': 1145, 'TRFDOWNLOADFAILURE': 1149, 'LOOPINGJOB': 1150, 'STAGEINTIMEOUT': 1151, 'STAGEOUTTIMEOUT': 1152, 'NOPROXY': 1163, 'MISSINGOUTPUTFILE': 1165, 'SIZETOOLARGE': 1168, 'GETADMISMATCH': 1171, 'PUTADMISMATCH': 1172, 'NOVOMSPROXY': 1177, 'GETGLOBUSSYSERR': 1180, 'PUTGLOBUSSYSERR': 1181, 'NOSOFTWAREDIR': 1186, 'NOPAYLOADMETADATA': 1187, 'LFNTOOLONG': 1190, 'ZEROFILESIZE': 1191, 'MKDIR': 1199, 'KILLSIGNAL': 1200, 'SIGTERM': 1201, 'SIGQUIT': 1202, 'SIGSEGV': 1203, 'SIGXCPU': 1204, 'USERKILL': 1205, 'SIGBUS': 1206, 'SIGUSR1': 1207, 'MISSINGINSTALLATION': 1211, 'PAYLOADOUTOFMEMORY': 1212, 'REACHEDMAXTIME': 1213, 'UNKNOWNPAYLOADFAILURE': 1220, 'FILEEXISTS': 1221, 'BADALLOC': 1223, 'ESRECOVERABLE': 1224, 'ESFATAL': 1228, 'EXECUTEDCLONEJOB': 1234, 'PAYLOADEXCEEDMAXMEM': 1235, 'FAILEDBYSERVER': 1236, 'ESNOEVENTS': 1238, 'MESSAGEHANDLINGFAILURE': 1240, 'CHKSUMNOTSUP': 1242, 'NORELEASEFOUND': 1244, 'NOUSERTARBALL': 1246, 'BADXML': 1247, 'NOTIMPLEMENTED': 1300, 'UNKNOWNEXCEPTION': 1301, 'CONVERSIONFAILURE': 1302, 'FILEHANDLINGFAILURE': 1303, 'PAYLOADEXECUTIONFAILURE': 1305, 'SINGULARITYGENERALFAILURE': 1306, 'SINGULARITYNOLOOPDEVICES': 1307, 'SINGULARITYBINDPOINTFAILURE': 1308, 'SINGULARITYIMAGEMOUNTFAILURE': 1309, 'PAYLOADEXECUTIONEXCEPTION': 1310, 'NOTDEFINED': 1311, 'NOTSAMELENGTH': 1312, 'NOSTORAGEPROTOCOL': 1313, 'UNKNOWNCHECKSUMTYPE': 1314, 'UNKNOWNTRFFAILURE': 1315, 'RUCIOSERVICEUNAVAILABLE': 1316, 'EXCEEDEDMAXWAITTIME': 1317, 'COMMUNICATIONFAILURE': 1318, 'INTERNALPILOTPROBLEM': 1319, 'LOGFILECREATIONFAILURE': 1320, 'RUCIOLOCATIONFAILED': 1321, 'RUCIOLISTREPLICASFAILED': 1322, 'UNKNOWNCOPYTOOL': 1323, 'SERVICENOTAVAILABLE': 1324, 'SINGULARITYNOTINSTALLED': 1325, 'NOREPLICAS': 1326, 'UNREACHABLENETWORK': 1327, 'PAYLOADSIGSEGV': 1328, 'NONDETERMINISTICDDM': 1329, 'JSONRETRIEVALTIMEOUT': 1330, 'MISSINGINPUTFILE': 1331, 'BLACKHOLE': 1332, 'NOREMOTESPACE': 1333, 'ATLASSETUPFATAL': 1334, 'MISSINGUSERCODE': 1335, 'JOBALREADYRUNNING': 1336, 'BADMEMORYMONITORJSON': 1337, 'STAGEINAUTHENTICATIONFAILURE': 1338, 'DBRELEASEFAILURE': 1339, 'SINGULARITYNEWUSERNAMESPACE': 1340, 'BADQUEUECONFIGURATION': 1341, 'MIDDLEWAREIMPORTFAILURE': 1342, 'NOOUTPUTINJOBREPORT': 1343, 'RESOURCEUNAVAILABLE': 1344, 'SINGULARITYFAILEDUSERNAMESPACE': 1345, 'TRANSFORMNOTFOUND': 1346, 'UNSUPPORTEDSL5OS': 1347, 'SINGULARITYRESOURCEUNAVAILABLE': 1348, 'UNRECOGNIZEDTRFARGUMENTS': 1349, 'EMPTYOUTPUTFILE': 1350, 'UNRECOGNIZEDTRFSTDERR': 1351, 'STATFILEPROBLEM': 1352, 'NOSUCHPROCESS': 1353, 'GENERALCPUCALCPROBLEM': 1354, 'COREDUMP': 1355, 'PREPROCESSFAILURE': 1356, 'POSTPROCESSFAILURE': 1357, 'MISSINGRELEASEUNPACKED': 1358, 'PANDAQUEUENOTACTIVE': 1359, 'IMAGENOTFOUND': 1360, 'REMOTEFILECOULDNOTBEOPENED': 1361, 'XRDCPERROR': 1362, '_error_messages': {1008: 'General pilot error, consult batch log', 1098: 'Not enough local space', 1099: 'Failed to stage-in file', 1100: 'Replica not found', 1103: 'No such file or directory', 1104: 'User work directory too large', 1106: 'Payload log or stdout file too big', 1110: 'Failed during payload setup', 1115: 'NFS SQLite locking problems', 1116: 'Pilot could not download queuedata', 1117: 'Pilot found non-valid queuedata', 1124: 'Output file too large', 1133: 'Fetching default storage failed: no activity related storage defined', 1137: 'Failed to stage-out file', 1141: 'md5sum mismatch on output file', 1145: 'md5sum mismatch on input file', 1143: 'Failed to chmod transform', 1144: 'This job was killed by panda server', 1165: 'Local output file is missing', 1168: 'Total file size too large', 1149: 'Transform could not be downloaded', 1150: 'Looping job killed by pilot', 1151: 'File transfer timed out during stage-in', 1152: 'File transfer timed out during stage-out', 1163: 'Grid proxy not valid', 1171: 'adler32 mismatch on input file', 1172: 'adler32 mismatch on output file', 1177: 'Voms proxy not valid', 1180: 'Globus system error during stage-in', 1181: 'Globus system error during stage-out', 1186: 'Software directory does not exist', 1187: 'Payload metadata does not exist', 1190: 'LFN too long (exceeding limit of 255 characters)', 1191: 'File size cannot be zero', 1199: 'Failed to create local directory', 1200: 'Job terminated by unknown kill signal', 1201: 'Job killed by signal: SIGTERM', 1202: 'Job killed by signal: SIGQUIT', 1203: 'Job killed by signal: SIGSEGV', 1204: 'Job killed by signal: SIGXCPU', 1207: 'Job killed by signal: SIGUSR1', 1206: 'Job killed by signal: SIGBUS', 1205: 'Job killed by user', 1211: 'Missing installation', 1212: 'Payload ran out of memory', 1213: 'Reached batch system time limit', 1220: 'Job failed due to unknown reason (consult log file)', 1221: 'File already exists', 1223: 'Transform failed due to bad_alloc', 1242: 'Query checksum is not supported', 1244: 'No release candidates found', 1246: 'User tarball could not be downloaded from PanDA server', 1247: 'Badly formed XML', 1224: 'Event service: recoverable error', 1228: 'Event service: fatal error', 1234: 'Clone job is already executed', 1235: 'Payload exceeded maximum allowed memory', 1236: 'Failed by server', 1238: 'Event service: no events', 1240: 'Failed to handle message from payload', 1300: 'The class or function is not implemented', 1301: 'An unknown pilot exception has occurred', 1302: 'Failed to convert object data', 1303: 'Failed during file handling', 1305: 'Failed to execute payload', 1306: 'Singularity: general failure', 1307: 'Singularity: No more available loop devices', 1308: 'Singularity: Not mounting requested bind point', 1309: 'Singularity: Failed to mount image', 1325: 'Singularity: not installed', 1310: 'Exception caught during payload execution', 1311: 'Not defined', 1312: 'Not same length', 1313: 'No protocol defined for storage endpoint', 1314: 'Unknown checksum type', 1315: 'Unknown transform failure', 1316: 'Rucio: Service unavailable', 1317: 'Exceeded maximum waiting time', 1318: 'Failed to communicate with server', 1319: 'An internal Pilot problem has occurred (consult Pilot log)', 1320: 'Failed during creation of log file', 1321: 'Failed to get client location for Rucio', 1322: 'Failed to get replicas from Rucio', 1323: 'Unknown copy tool', 1324: 'Service not available at the moment', 1326: 'No matching replicas were found in list_replicas() output', 1327: 'Unable to stage-in file since network is unreachable', 1328: 'SIGSEGV: Invalid memory reference or a segmentation fault', 1329: 'Failed to construct SURL for non-deterministic ddm (update AGIS)', 1330: 'JSON retrieval timed out', 1331: 'Input file is missing in storage element', 1332: 'Black hole detected in file system (consult Pilot log)', 1333: 'No space left on device', 1334: 'AtlasSetup failed with a fatal exception (consult Payload log)', 1335: 'User code not available on PanDA server (resubmit task with --useNewCode)', 1336: 'Job is already running elsewhere', 1337: 'Memory monitor produced bad output', 1338: 'Authentication failure during stage-in', 1339: 'Local DBRelease handling failed (consult Pilot log)', 1340: 'Singularity: Failed invoking the NEWUSER namespace runtime', 1341: 'Bad queue configuration detected', 1342: 'Failed to import middleware (consult Pilot log)', 1343: 'Found no output in job report', 1344: 'Resource temporarily unavailable', 1345: 'Singularity: Failed to create user namespace', 1346: 'Transform not found', 1347: 'Unsupported SL5 OS', 1348: 'Singularity: Resource temporarily unavailable', 1349: 'Unrecognized transform arguments', 1350: 'Empty output file detected', 1351: 'Unrecognized fatal error in transform stderr', 1352: 'Failed to stat proc file for CPU consumption calculation', 1353: 'CPU consumption calculation failed: No such process', 1354: 'General CPU consumption calculation problem (consult Pilot log)', 1355: 'Core dump detected', 1356: 'Pre-process command failed', 1357: 'Post-process command failed', 1358: 'Missing release setup in unpacked container', 1359: 'PanDA queue is not active', 1360: 'Image not found', 1361: 'Remote file could not be opened', 1362: 'Xrdcp was unable to open file'}, 'put_error_codes': [1135, 1136, 1137, 1141, 1152, 1181], 'recoverable_error_codes': [0, 1135, 1136, 1137, 1141, 1152, 1181], 'get_kill_signal_error_code': &lt;function ErrorCodes.get_kill_signal_error_code&gt;, 'get_error_message': &lt;function ErrorCodes.get_error_message&gt;, 'add_error_code': &lt;function ErrorCodes.add_error_code&gt;, 'report_errors': &lt;function ErrorCodes.report_errors&gt;, 'resolve_transform_error': &lt;function ErrorCodes.resolve_transform_error&gt;, 'extract_stderr_error': &lt;function ErrorCodes.extract_stderr_error&gt;, 'extract_stderr_warning': &lt;function ErrorCodes.extract_stderr_warning&gt;, 'get_message_for_pattern': &lt;function ErrorCodes.get_message_for_pattern&gt;, 'format_diagnostics': &lt;function ErrorCodes.format_diagnostics&gt;, 'is_recoverable': &lt;classmethod object&gt;, '__dict__': &lt;attribute '__dict__' of 'ErrorCodes' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'ErrorCodes' objects&gt;})</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.__dict__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.__module__">
+<code class="sig-name descname">__module__</code><em class="property"> = 'pilot.common.errorcodes'</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.__weakref__">
+<code class="sig-name descname">__weakref__</code><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes._error_messages">
+<code class="sig-name descname">_error_messages</code><em class="property"> = {1008: 'General pilot error, consult batch log', 1098: 'Not enough local space', 1099: 'Failed to stage-in file', 1100: 'Replica not found', 1103: 'No such file or directory', 1104: 'User work directory too large', 1106: 'Payload log or stdout file too big', 1110: 'Failed during payload setup', 1115: 'NFS SQLite locking problems', 1116: 'Pilot could not download queuedata', 1117: 'Pilot found non-valid queuedata', 1124: 'Output file too large', 1133: 'Fetching default storage failed: no activity related storage defined', 1137: 'Failed to stage-out file', 1141: 'md5sum mismatch on output file', 1143: 'Failed to chmod transform', 1144: 'This job was killed by panda server', 1145: 'md5sum mismatch on input file', 1149: 'Transform could not be downloaded', 1150: 'Looping job killed by pilot', 1151: 'File transfer timed out during stage-in', 1152: 'File transfer timed out during stage-out', 1163: 'Grid proxy not valid', 1165: 'Local output file is missing', 1168: 'Total file size too large', 1171: 'adler32 mismatch on input file', 1172: 'adler32 mismatch on output file', 1177: 'Voms proxy not valid', 1180: 'Globus system error during stage-in', 1181: 'Globus system error during stage-out', 1186: 'Software directory does not exist', 1187: 'Payload metadata does not exist', 1190: 'LFN too long (exceeding limit of 255 characters)', 1191: 'File size cannot be zero', 1199: 'Failed to create local directory', 1200: 'Job terminated by unknown kill signal', 1201: 'Job killed by signal: SIGTERM', 1202: 'Job killed by signal: SIGQUIT', 1203: 'Job killed by signal: SIGSEGV', 1204: 'Job killed by signal: SIGXCPU', 1205: 'Job killed by user', 1206: 'Job killed by signal: SIGBUS', 1207: 'Job killed by signal: SIGUSR1', 1211: 'Missing installation', 1212: 'Payload ran out of memory', 1213: 'Reached batch system time limit', 1220: 'Job failed due to unknown reason (consult log file)', 1221: 'File already exists', 1223: 'Transform failed due to bad_alloc', 1224: 'Event service: recoverable error', 1228: 'Event service: fatal error', 1234: 'Clone job is already executed', 1235: 'Payload exceeded maximum allowed memory', 1236: 'Failed by server', 1238: 'Event service: no events', 1240: 'Failed to handle message from payload', 1242: 'Query checksum is not supported', 1244: 'No release candidates found', 1246: 'User tarball could not be downloaded from PanDA server', 1247: 'Badly formed XML', 1300: 'The class or function is not implemented', 1301: 'An unknown pilot exception has occurred', 1302: 'Failed to convert object data', 1303: 'Failed during file handling', 1305: 'Failed to execute payload', 1306: 'Singularity: general failure', 1307: 'Singularity: No more available loop devices', 1308: 'Singularity: Not mounting requested bind point', 1309: 'Singularity: Failed to mount image', 1310: 'Exception caught during payload execution', 1311: 'Not defined', 1312: 'Not same length', 1313: 'No protocol defined for storage endpoint', 1314: 'Unknown checksum type', 1315: 'Unknown transform failure', 1316: 'Rucio: Service unavailable', 1317: 'Exceeded maximum waiting time', 1318: 'Failed to communicate with server', 1319: 'An internal Pilot problem has occurred (consult Pilot log)', 1320: 'Failed during creation of log file', 1321: 'Failed to get client location for Rucio', 1322: 'Failed to get replicas from Rucio', 1323: 'Unknown copy tool', 1324: 'Service not available at the moment', 1325: 'Singularity: not installed', 1326: 'No matching replicas were found in list_replicas() output', 1327: 'Unable to stage-in file since network is unreachable', 1328: 'SIGSEGV: Invalid memory reference or a segmentation fault', 1329: 'Failed to construct SURL for non-deterministic ddm (update AGIS)', 1330: 'JSON retrieval timed out', 1331: 'Input file is missing in storage element', 1332: 'Black hole detected in file system (consult Pilot log)', 1333: 'No space left on device', 1334: 'AtlasSetup failed with a fatal exception (consult Payload log)', 1335: 'User code not available on PanDA server (resubmit task with --useNewCode)', 1336: 'Job is already running elsewhere', 1337: 'Memory monitor produced bad output', 1338: 'Authentication failure during stage-in', 1339: 'Local DBRelease handling failed (consult Pilot log)', 1340: 'Singularity: Failed invoking the NEWUSER namespace runtime', 1341: 'Bad queue configuration detected', 1342: 'Failed to import middleware (consult Pilot log)', 1343: 'Found no output in job report', 1344: 'Resource temporarily unavailable', 1345: 'Singularity: Failed to create user namespace', 1346: 'Transform not found', 1347: 'Unsupported SL5 OS', 1348: 'Singularity: Resource temporarily unavailable', 1349: 'Unrecognized transform arguments', 1350: 'Empty output file detected', 1351: 'Unrecognized fatal error in transform stderr', 1352: 'Failed to stat proc file for CPU consumption calculation', 1353: 'CPU consumption calculation failed: No such process', 1354: 'General CPU consumption calculation problem (consult Pilot log)', 1355: 'Core dump detected', 1356: 'Pre-process command failed', 1357: 'Post-process command failed', 1358: 'Missing release setup in unpacked container', 1359: 'PanDA queue is not active', 1360: 'Image not found', 1361: 'Remote file could not be opened', 1362: 'Xrdcp was unable to open file'}</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes._error_messages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.add_error_code">
+<code class="sig-name descname">add_error_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">errorcode</span></em>, <em class="sig-param"><span class="n">pilot_error_codes</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">pilot_error_diags</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">priority</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.add_error_code"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.add_error_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add pilot error code to list of error codes.
+This function adds the given error code to the list of all errors that have occurred. This is needed since
+several errors can happen; e.g. a stage-in error can be followed by a stage-out error during the log transfer.
+The full list of errors is dumped to the log, but only the first error is reported to the server.
+The function also sets the corresponding error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errorcode</strong> – pilot error code (integer)</p></li>
+<li><p><strong>pilot_error_codes</strong> – list of pilot error codes (list of integers)</p></li>
+<li><p><strong>pilot_error_diags</strong> – list of pilot error diags (list of strings)</p></li>
+<li><p><strong>priority</strong> – if set to True, the new errorcode will be added to the error code list first (highest priority)</p></li>
+<li><p><strong>msg</strong> – error message (more detailed) to overwrite standard error message (string).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pilot_error_codes, pilot_error_diags</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.extract_stderr_error">
+<code class="sig-name descname">extract_stderr_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stderr</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.extract_stderr_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.extract_stderr_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the ERROR message from the payload stderr.
+:param stderr: string.
+:return: string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.extract_stderr_warning">
+<code class="sig-name descname">extract_stderr_warning</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stderr</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.extract_stderr_warning"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.extract_stderr_warning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the WARNING message from the payload stderr.
+:param stderr: string.
+:return: string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.format_diagnostics">
+<code class="sig-name descname">format_diagnostics</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span></em>, <em class="sig-param"><span class="n">diag</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.format_diagnostics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.format_diagnostics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format the error diagnostics by adding the standard error message and the tail of the longer piloterrordiag.
+If there is any kind of failure handling the diagnostics string, the standard error description will be returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> – standard error code (int).</p></li>
+<li><p><strong>diag</strong> – dynamic error diagnostics (string).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>formatted error diagnostics (string).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.get_error_message">
+<code class="sig-name descname">get_error_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">errorcode</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.get_error_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.get_error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the error message corresponding to the given error code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>errorcode</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>errormessage (string)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.get_kill_signal_error_code">
+<code class="sig-name descname">get_kill_signal_error_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">signal</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.get_kill_signal_error_code"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.get_kill_signal_error_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Match a kill signal with a corresponding Pilot error code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>signal</strong> – signal name (string).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pilot error code (integer).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.get_message_for_pattern">
+<code class="sig-name descname">get_message_for_pattern</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">patterns</span></em>, <em class="sig-param"><span class="n">stderr</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.get_message_for_pattern"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.get_message_for_pattern" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>patterns</strong> – list of patterns.</p></li>
+<li><p><strong>stderr</strong> – string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.is_recoverable">
+<em class="property">classmethod </em><code class="sig-name descname">is_recoverable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.is_recoverable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.is_recoverable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine whether code is a recoverable error code or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>code</strong> – Pilot error code (int).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>boolean.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.put_error_codes">
+<code class="sig-name descname">put_error_codes</code><em class="property"> = [1135, 1136, 1137, 1141, 1152, 1181]</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.put_error_codes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.common.errorcodes.ErrorCodes.recoverable_error_codes">
+<code class="sig-name descname">recoverable_error_codes</code><em class="property"> = [0, 1135, 1136, 1137, 1141, 1152, 1181]</em><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.recoverable_error_codes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.report_errors">
+<code class="sig-name descname">report_errors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pilot_error_codes</span></em>, <em class="sig-param"><span class="n">pilot_error_diags</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.report_errors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.report_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Report all errors that occurred during running.
+The function should be called towards the end of running a job.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pilot_error_codes</strong> – list of pilot error codes (list of integers)</p></li>
+<li><p><strong>pilot_error_diags</strong> – list of pilot error diags (list of strings)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>error_report (string)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.common.errorcodes.ErrorCodes.resolve_transform_error">
+<code class="sig-name descname">resolve_transform_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">exit_code</span></em>, <em class="sig-param"><span class="n">stderr</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/common/errorcodes.html#ErrorCodes.resolve_transform_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.common.errorcodes.ErrorCodes.resolve_transform_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign a pilot error code to a specific transform error.
+:param exit_code: transform exit code.
+:param stderr: transform stderr
+:return: pilot error code (int)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Pilot 2</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">api components</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">common components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control/index.html">control components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../copytool/index.html">copytool components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eventservice/index.html">eventservice components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info/index.html">info components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource/index.html">resource components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user/index.html">user components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../util/index.html">util components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">workflow components</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Components</a><ul>
+  <li><a href="index.html">common components</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">common components</a></li>
+      <li>Next: <a href="exception.html" title="next chapter">exception</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/components/common/errorcodes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Paul Nilsson, Mario Lassnig, Daniil Drizhuk, ....
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/components/common/errorcodes.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

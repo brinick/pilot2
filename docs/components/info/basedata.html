@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basedata &#8212; Pilot 2  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="configinfo" href="configinfo.html" />
+    <link rel="prev" title="info components" href="index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pilot.info.basedata">
+<span id="basedata"></span><h1>basedata<a class="headerlink" href="#module-pilot.info.basedata" title="Permalink to this headline">¶</a></h1>
+<p>The implementation of base data structure to host various settings collected
+from external source with built-in validation and schema translation support.</p>
+<dl>
+<dt>The main reasons for such incapsulation are to</dt><dd><ul class="simple">
+<li><p>apply in one place all data validation actions (for attributes and values)</p></li>
+<li><p>introduce internal information schema (names of attribues) to remove dependency</p></li>
+</ul>
+<p>with data structrure, formats, names from external sources (e.g. AGIS/CRIC)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">author</dt>
+<dd class="field-odd"><p>Alexey Anisenkov</p>
+</dd>
+<dt class="field-even">contact</dt>
+<dd class="field-even"><p><a class="reference external" href="mailto:anisyonk&#37;&#52;&#48;cern&#46;ch">anisyonk<span>&#64;</span>cern<span>&#46;</span>ch</a></p>
+</dd>
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>January 2018</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt id="pilot.info.basedata.BaseData">
+<em class="property">class </em><code class="sig-prename descclassname">pilot.info.basedata.</code><code class="sig-name descname">BaseData</code><a class="reference internal" href="../../_modules/pilot/info/basedata.html#BaseData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.basedata.BaseData" title="Permalink to this definition">¶</a></dt>
+<dd><p>High-level object to host structured data collected from external source
+It’s considered to be like a bridge (connector) in order to remove direct dependency to
+external schema (format) implementation</p>
+<dl class="py attribute">
+<dt id="pilot.info.basedata.BaseData.__dict__">
+<code class="sig-name descname">__dict__</code><em class="property"> = mappingproxy({'__module__': 'pilot.info.basedata', '__doc__': &quot;\n        High-level object to host structured data collected from external source\n        It's considered to be like a bridge (connector) in order to remove direct dependency to\n        external schema (format) implementation\n    &quot;, '_keys': {}, '_load_data': &lt;function BaseData._load_data&gt;, 'clean': &lt;function BaseData.clean&gt;, 'clean_numeric': &lt;function BaseData.clean_numeric&gt;, 'clean_string': &lt;function BaseData.clean_string&gt;, 'clean_boolean': &lt;function BaseData.clean_boolean&gt;, 'clean_dictdata': &lt;function BaseData.clean_dictdata&gt;, 'clean_listdata': &lt;function BaseData.clean_listdata&gt;, '__repr__': &lt;function BaseData.__repr__&gt;, '__dict__': &lt;attribute '__dict__' of 'BaseData' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'BaseData' objects&gt;})</em><a class="headerlink" href="#pilot.info.basedata.BaseData.__dict__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.basedata.BaseData.__module__">
+<code class="sig-name descname">__module__</code><em class="property"> = 'pilot.info.basedata'</em><a class="headerlink" href="#pilot.info.basedata.BaseData.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.basedata.BaseData.__repr__">
+<code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/basedata.html#BaseData.__repr__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.basedata.BaseData.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default representation of an object</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.basedata.BaseData.__weakref__">
+<code class="sig-name descname">__weakref__</code><a class="headerlink" href="#pilot.info.basedata.BaseData.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.basedata.BaseData._keys">
+<code class="sig-name descname">_keys</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.basedata.BaseData._keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.basedata.BaseData._load_data">
+<code class="sig-name descname">_load_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">kmap</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">validators</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/basedata.html#BaseData._load_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.basedata.BaseData._load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct and initialize data from ext source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – input dictionary of raw data settings</p></li>
+<li><p><strong>kmap</strong> – the translation map of data attributes from external format to internal schema</p></li>
+<li><p><strong>validators</strong> – map of validation handlers to be applied</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.basedata.BaseData.clean">
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/basedata.html#BaseData.clean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.basedata.BaseData.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate and finally clean up required data values (required object properties) if need
+Executed once all fields have already passed field-specific validation checks
+Could be customized by child object
+:return: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.basedata.BaseData.clean_boolean">
+<code class="sig-name descname">clean_boolean</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw</span></em>, <em class="sig-param"><span class="n">ktype</span></em>, <em class="sig-param"><span class="n">kname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defval</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/basedata.html#BaseData.clean_boolean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.basedata.BaseData.clean_boolean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean and convert input value to requested boolean type
+:param raw: raw input data
+:param ktype: variable type to which result should be casted
+:param defval: default value to be used in case of cast error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.basedata.BaseData.clean_dictdata">
+<code class="sig-name descname">clean_dictdata</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw</span></em>, <em class="sig-param"><span class="n">ktype</span></em>, <em class="sig-param"><span class="n">kname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defval</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/basedata.html#BaseData.clean_dictdata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.basedata.BaseData.clean_dictdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean and convert input value to requested dict type
+:param raw: raw input data
+:param ktype: variable type to which result should be casted
+:param defval: default value to be used in case of cast error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.basedata.BaseData.clean_listdata">
+<code class="sig-name descname">clean_listdata</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw</span></em>, <em class="sig-param"><span class="n">ktype</span></em>, <em class="sig-param"><span class="n">kname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defval</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/basedata.html#BaseData.clean_listdata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.basedata.BaseData.clean_listdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean and convert input value to requested list type
+:param raw: raw input data
+:param ktype: variable type to which result should be casted
+:param defval: default value to be used in case of cast error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.basedata.BaseData.clean_numeric">
+<code class="sig-name descname">clean_numeric</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw</span></em>, <em class="sig-param"><span class="n">ktype</span></em>, <em class="sig-param"><span class="n">kname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defval</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/basedata.html#BaseData.clean_numeric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.basedata.BaseData.clean_numeric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean and convert input value to requested numeric type
+:param raw: raw input data
+:param ktype: variable type to which result should be casted
+:param defval: default value to be used in case of cast error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.basedata.BaseData.clean_string">
+<code class="sig-name descname">clean_string</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw</span></em>, <em class="sig-param"><span class="n">ktype</span></em>, <em class="sig-param"><span class="n">kname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defval</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/basedata.html#BaseData.clean_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.basedata.BaseData.clean_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean and convert input value to requested string type
+:param raw: raw input data
+:param ktype: variable type to which result should be casted
+:param defval: default value to be used in case of cast error</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Pilot 2</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">api components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common/index.html">common components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control/index.html">control components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../copytool/index.html">copytool components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eventservice/index.html">eventservice components</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">info components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource/index.html">resource components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user/index.html">user components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../util/index.html">util components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">workflow components</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Components</a><ul>
+  <li><a href="index.html">info components</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">info components</a></li>
+      <li>Next: <a href="configinfo.html" title="next chapter">configinfo</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/components/info/basedata.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Paul Nilsson, Mario Lassnig, Daniil Drizhuk, ....
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/components/info/basedata.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

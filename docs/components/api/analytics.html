@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>analytics &#8212; Pilot 2  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="benchmark" href="benchmark.html" />
+    <link rel="prev" title="api components" href="index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pilot.api.analytics">
+<span id="analytics"></span><h1>analytics<a class="headerlink" href="#module-pilot.api.analytics" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="pilot.api.analytics.Analytics">
+<em class="property">class </em><code class="sig-prename descclassname">pilot.api.analytics.</code><code class="sig-name descname">Analytics</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Analytics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Analytics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analytics service class.</p>
+<dl class="py method">
+<dt id="pilot.api.analytics.Analytics.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Analytics.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Analytics.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Analytics.__module__">
+<code class="sig-name descname">__module__</code><em class="property"> = 'pilot.api.analytics'</em><a class="headerlink" href="#pilot.api.analytics.Analytics.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Analytics._fit">
+<code class="sig-name descname">_fit</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Analytics._fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Analytics.chi2">
+<code class="sig-name descname">chi2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Analytics.chi2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Analytics.chi2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the chi2 of the fit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../common/exception.html#pilot.common.exception.NotDefined" title="pilot.common.exception.NotDefined"><strong>NotDefined</strong></a> – exception thrown if fit is not defined.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>chi2 (float).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Analytics.extract_from_table">
+<code class="sig-name descname">extract_from_table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">table</span></em>, <em class="sig-param"><span class="n">x_name</span></em>, <em class="sig-param"><span class="n">y_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Analytics.extract_from_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Analytics.extract_from_table" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – dictionary with columns.</p></li>
+<li><p><strong>x_name</strong> – column name to be extracted (string).</p></li>
+<li><p><strong>y_name</strong> – column name to be extracted (may contain ‘+’-sign) (string).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>x (list), y (list).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Analytics.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">model</span><span class="o">=</span><span class="default_value">'linear'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Analytics.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Analytics.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fitting function.
+For a linear model: y(x) = slope * x + intersect</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – list of input data (list of floats or ints).</p></li>
+<li><p><strong>y</strong> – list of input data (list of floats or ints).</p></li>
+<li><p><strong>model</strong> – model name (string).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="../common/exception.html#pilot.common.exception.UnknownException" title="pilot.common.exception.UnknownException"><strong>UnknownException</strong></a> – in case Fit() fails.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Analytics.get_fitted_data">
+<code class="sig-name descname">get_fitted_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">x_name</span><span class="o">=</span><span class="default_value">'Time'</span></em>, <em class="sig-param"><span class="n">y_name</span><span class="o">=</span><span class="default_value">'pss+swap'</span></em>, <em class="sig-param"><span class="n">precision</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">tails</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Analytics.get_fitted_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Analytics.get_fitted_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a properly formatted job metrics string with analytics data.
+Currently the function returns a fit for PSS+Swap vs time, whose slope measures memory leaks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – full path to memory monitor output (string).</p></li>
+<li><p><strong>x_name</strong> – optional string, name selector for table column.</p></li>
+<li><p><strong>y_name</strong> – optional string, name selector for table column.</p></li>
+<li><p><strong>precision</strong> – optional precision for fitted slope parameter, default 2.</p></li>
+<li><p><strong>tails</strong> – should tails (first and last values) be used? (boolean).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>{“slope”: slope, “chi2”: chi2} (float strings with desired precision).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Analytics.get_table">
+<code class="sig-name descname">get_table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">header</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">separator</span><span class="o">=</span><span class="default_value">'\t'</span></em>, <em class="sig-param"><span class="n">convert_to_float</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Analytics.get_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Analytics.get_table" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – full path to input file (string).</p></li>
+<li><p><strong>header</strong> – header string.</p></li>
+<li><p><strong>separator</strong> – separator character (char).</p></li>
+<li><p><strong>convert_to_float</strong> – boolean, if True, all values will be converted to floats.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Analytics.intersect">
+<code class="sig-name descname">intersect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Analytics.intersect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Analytics.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the intersect of a linear fit, y(x) = slope * x + intersect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../common/exception.html#pilot.common.exception.NotDefined" title="pilot.common.exception.NotDefined"><strong>NotDefined</strong></a> – exception thrown if fit is not defined.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>intersect (float).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Analytics.slope">
+<code class="sig-name descname">slope</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Analytics.slope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Analytics.slope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the slope of a linear fit, y(x) = slope * x + intersect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../common/exception.html#pilot.common.exception.NotDefined" title="pilot.common.exception.NotDefined"><strong>NotDefined</strong></a> – exception thrown if fit is not defined.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>slope (float).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pilot.api.analytics.Fit">
+<em class="property">class </em><code class="sig-prename descclassname">pilot.api.analytics.</code><code class="sig-name descname">Fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Low-level fitting class.</p>
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit.__dict__">
+<code class="sig-name descname">__dict__</code><em class="property"> = mappingproxy({'__module__': 'pilot.api.analytics', '__doc__': '\n    Low-level fitting class.\n    ', '_model': 'linear', '_x': None, '_y': None, '_xm': None, '_ym': None, '_ss': None, '_ss2': None, '_slope': None, '_intersect': None, '_chi2': None, '__init__': &lt;function Fit.__init__&gt;, 'fit': &lt;function Fit.fit&gt;, 'value': &lt;function Fit.value&gt;, 'set_chi2': &lt;function Fit.set_chi2&gt;, 'chi2': &lt;function Fit.chi2&gt;, 'set_slope': &lt;function Fit.set_slope&gt;, 'slope': &lt;function Fit.slope&gt;, 'set_intersect': &lt;function Fit.set_intersect&gt;, 'intersect': &lt;function Fit.intersect&gt;, '__dict__': &lt;attribute '__dict__' of 'Fit' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Fit' objects&gt;})</em><a class="headerlink" href="#pilot.api.analytics.Fit.__dict__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Fit.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> – </p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="../common/exception.html#pilot.common.exception.PilotException" title="pilot.common.exception.PilotException"><strong>PilotException</strong></a> – NotImplemented for unknown fitting model, NotDefined if input data not defined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit.__module__">
+<code class="sig-name descname">__module__</code><em class="property"> = 'pilot.api.analytics'</em><a class="headerlink" href="#pilot.api.analytics.Fit.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit.__weakref__">
+<code class="sig-name descname">__weakref__</code><a class="headerlink" href="#pilot.api.analytics.Fit.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._chi2">
+<code class="sig-name descname">_chi2</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Fit._chi2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._intersect">
+<code class="sig-name descname">_intersect</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Fit._intersect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._model">
+<code class="sig-name descname">_model</code><em class="property"> = 'linear'</em><a class="headerlink" href="#pilot.api.analytics.Fit._model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._slope">
+<code class="sig-name descname">_slope</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Fit._slope" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._ss">
+<code class="sig-name descname">_ss</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Fit._ss" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._ss2">
+<code class="sig-name descname">_ss2</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Fit._ss2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._x">
+<code class="sig-name descname">_x</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Fit._x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._xm">
+<code class="sig-name descname">_xm</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Fit._xm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._y">
+<code class="sig-name descname">_y</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Fit._y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.api.analytics.Fit._ym">
+<code class="sig-name descname">_ym</code><em class="property"> = None</em><a class="headerlink" href="#pilot.api.analytics.Fit._ym" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Fit.chi2">
+<code class="sig-name descname">chi2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit.chi2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit.chi2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the chi2 value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>chi2 (float).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Fit.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return fitting object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>fitting object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Fit.intersect">
+<code class="sig-name descname">intersect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit.intersect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the intersect value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>intersect (float).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Fit.set_chi2">
+<code class="sig-name descname">set_chi2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit.set_chi2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit.set_chi2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate and set the chi2 value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Fit.set_intersect">
+<code class="sig-name descname">set_intersect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit.set_intersect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit.set_intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate and set the intersect of the linear fit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Fit.set_slope">
+<code class="sig-name descname">set_slope</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit.set_slope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit.set_slope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate and set the slope of the linear fit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Fit.slope">
+<code class="sig-name descname">slope</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit.slope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit.slope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the slope value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>slope (float).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.api.analytics.Fit.value">
+<code class="sig-name descname">value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/api/analytics.html#Fit.value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.api.analytics.Fit.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value y(x=t) of a linear fit y(x) = slope * x + intersect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>intersect (float).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Pilot 2</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Components</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">api components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common/index.html">common components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control/index.html">control components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../copytool/index.html">copytool components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eventservice/index.html">eventservice components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info/index.html">info components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource/index.html">resource components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user/index.html">user components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../util/index.html">util components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">workflow components</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Components</a><ul>
+  <li><a href="index.html">api components</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">api components</a></li>
+      <li>Next: <a href="benchmark.html" title="next chapter">benchmark</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/components/api/analytics.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Paul Nilsson, Mario Lassnig, Daniil Drizhuk, ....
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/components/api/analytics.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

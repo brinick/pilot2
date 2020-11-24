@@ -1,0 +1,954 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jobdata &#8212; Pilot 2  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="jobinfo" href="jobinfo.html" />
+    <link rel="prev" title="infoservice" href="infoservice.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pilot.info.jobdata">
+<span id="jobdata"></span><h1>jobdata<a class="headerlink" href="#module-pilot.info.jobdata" title="Permalink to this headline">¶</a></h1>
+<p>The implementation of data structure to host Job definition.</p>
+<dl>
+<dt>The main reasons for such incapsulation are to</dt><dd><ul class="simple">
+<li><p>apply in one place all data validation actions (for attributes and values)</p></li>
+<li><p>introduce internal information schema (names of attributes) to remove dependency</p></li>
+</ul>
+<p>with data structure, formats, names from external source (PanDA)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">author</dt>
+<dd class="field-odd"><p>Alexey Anisenkov</p>
+</dd>
+<dt class="field-even">contact</dt>
+<dd class="field-even"><p><a class="reference external" href="mailto:anisyonk&#37;&#52;&#48;cern&#46;ch">anisyonk<span>&#64;</span>cern<span>&#46;</span>ch</a></p>
+</dd>
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>February 2018</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt id="pilot.info.jobdata.JobData">
+<em class="property">class </em><code class="sig-prename descclassname">pilot.info.jobdata.</code><code class="sig-name descname">JobData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData" title="Permalink to this definition">¶</a></dt>
+<dd><p>High-level object to host Job definition/settings</p>
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.__contains__">
+<code class="sig-name descname">__contains__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.__contains__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.__contains__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporary Integration function to keep dict-based access for old logic in compatible way
+TO BE REMOVED ONCE all fields will be moved to Job object attributes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.__getitem__">
+<code class="sig-name descname">__getitem__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.__getitem__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporary Integration function to keep dict-based access for old logic in compatible way
+TO BE REMOVED ONCE all fields will be moved to Job object attributes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – input dictionary of data settings</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.__module__">
+<code class="sig-name descname">__module__</code><em class="property"> = 'pilot.info.jobdata'</em><a class="headerlink" href="#pilot.info.jobdata.JobData.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.__setitem__">
+<code class="sig-name descname">__setitem__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.__setitem__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.__setitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporary Integration function to keep dict-based access for old logic in compatible way
+TO BE REMOVED ONCE all fields will be moved to Job object attributes</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData._keys">
+<code class="sig-name descname">_keys</code><em class="property"> = {&lt;class 'int'&gt;: ['corecount', 'piloterrorcode', 'transexitcode', 'exitcode', 'cpuconversionfactor', 'exeerrorcode', 'attemptnr', 'nevents', 'neventsw', 'pid', 'cpuconsumptiontime', 'maxcpucount', 'actualcorecount'], &lt;class 'str'&gt;: ['jobid', 'taskid', 'jobparams', 'transformation', 'destinationdblock', 'exeerrordiagstate', 'serverstate', 'workdir', 'stageout', 'platform', 'piloterrordiag', 'exitmsg', 'produserid', 'jobdefinitionid', 'writetofile', 'cpuconsumptionunit', 'homepackage', 'jobsetid', 'payload', 'processingtype', 'swrelease', 'zipmap', 'imagename', 'imagename_jobdef', 'accessmode', 'transfertype', 'datasetin', 'infilesguids', 'memorymonitor', 'allownooutput'], &lt;class 'list'&gt;: ['piloterrorcodes', 'piloterrordiags', 'workdirsizes', 'zombies', 'corecounts'], &lt;class 'dict'&gt;: ['status', 'fileinfo', 'metadata', 'utilities', 'overwrite_queuedata', 'sizes', 'preprocess', 'postprocess', 'coprocess', 'containeroptions'], &lt;class 'bool'&gt;: ['is_eventservice', 'is_eventservicemerge', 'is_hpo', 'noexecstrcnv', 'debug', 'usecontainer', 'use_vp']}</em><a class="headerlink" href="#pilot.info.jobdata.JobData._keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData._rawdata">
+<code class="sig-name descname">_rawdata</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData._rawdata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.accessmode">
+<code class="sig-name descname">accessmode</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.accessmode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.actualcorecount">
+<code class="sig-name descname">actualcorecount</code><em class="property"> = 0</em><a class="headerlink" href="#pilot.info.jobdata.JobData.actualcorecount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.add_size">
+<code class="sig-name descname">add_size</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.add_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.add_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a size measurement to the sizes field at the current time stamp.
+A size measurement is in Bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> – size of object in Bytes (int).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.add_workdir_size">
+<code class="sig-name descname">add_workdir_size</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">workdir_size</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.add_workdir_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.add_workdir_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a measured workdir size to the workdirsizes field.
+The function will deduce any input and output file sizes from the workdir size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>workdir_size</strong> – workdir size (int).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.allownooutput">
+<code class="sig-name descname">allownooutput</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.allownooutput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.alrbuserplatform">
+<code class="sig-name descname">alrbuserplatform</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.alrbuserplatform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.attemptnr">
+<code class="sig-name descname">attemptnr</code><em class="property"> = 0</em><a class="headerlink" href="#pilot.info.jobdata.JobData.attemptnr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.clean">
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.clean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate and finally clean up required data values (object properties) if need
+:return: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.clean__corecount">
+<code class="sig-name descname">clean__corecount</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.clean__corecount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.clean__corecount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify and validate value for the corecount key (set to 1 if not set)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.clean__jobparams">
+<code class="sig-name descname">clean__jobparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.clean__jobparams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.clean__jobparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify and validate value for the jobparams key
+Extract value from jobparams not related to job options.
+The function will in particular extract and remove –overwriteQueueData, ZIP_MAP and –containerimage.
+It will remove the old Pilot 1 option –overwriteQueuedata which should be replaced with –overwriteQueueData.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw</strong> – (unused).</p></li>
+<li><p><strong>value</strong> – job parameters (string).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>updated job parameters (string).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.clean__platform">
+<code class="sig-name descname">clean__platform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.clean__platform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.clean__platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify and validate value for the platform key.
+Set the alrbuserplatform value if encoded in platform/cmtconfig string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw</strong> – (unused).</p></li>
+<li><p><strong>value</strong> – platform (string).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>updated platform (string).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.collect_zombies">
+<code class="sig-name descname">collect_zombies</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tn</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.collect_zombies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.collect_zombies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect zombie child processes, tn is the max number of loops, plus 1,
+to avoid infinite looping even if some child processes really get wedged;
+tn=None means it will keep going until all child zombies have been collected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tn</strong> – max depth (int).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.command">
+<code class="sig-name descname">command</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.command" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.containeroptions">
+<code class="sig-name descname">containeroptions</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.containeroptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.coprocess">
+<code class="sig-name descname">coprocess</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.coprocess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.corecount">
+<code class="sig-name descname">corecount</code><em class="property"> = 1</em><a class="headerlink" href="#pilot.info.jobdata.JobData.corecount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.corecounts">
+<code class="sig-name descname">corecounts</code><em class="property"> = []</em><a class="headerlink" href="#pilot.info.jobdata.JobData.corecounts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.cpuconsumptiontime">
+<code class="sig-name descname">cpuconsumptiontime</code><em class="property"> = -1</em><a class="headerlink" href="#pilot.info.jobdata.JobData.cpuconsumptiontime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.cpuconsumptionunit">
+<code class="sig-name descname">cpuconsumptionunit</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.cpuconsumptionunit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.cpuconversionfactor">
+<code class="sig-name descname">cpuconversionfactor</code><em class="property"> = 1</em><a class="headerlink" href="#pilot.info.jobdata.JobData.cpuconversionfactor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.datasetin">
+<code class="sig-name descname">datasetin</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.datasetin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.dbdata">
+<code class="sig-name descname">dbdata</code><em class="property"> = None</em><a class="headerlink" href="#pilot.info.jobdata.JobData.dbdata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.dbtime">
+<code class="sig-name descname">dbtime</code><em class="property"> = None</em><a class="headerlink" href="#pilot.info.jobdata.JobData.dbtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.debug">
+<code class="sig-name descname">debug</code><em class="property"> = False</em><a class="headerlink" href="#pilot.info.jobdata.JobData.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.destinationdblock">
+<code class="sig-name descname">destinationdblock</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.destinationdblock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.exeerrorcode">
+<code class="sig-name descname">exeerrorcode</code><em class="property"> = 0</em><a class="headerlink" href="#pilot.info.jobdata.JobData.exeerrorcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.exeerrordiag">
+<code class="sig-name descname">exeerrordiag</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.exeerrordiag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.exitcode">
+<code class="sig-name descname">exitcode</code><em class="property"> = 0</em><a class="headerlink" href="#pilot.info.jobdata.JobData.exitcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.exitmsg">
+<code class="sig-name descname">exitmsg</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.exitmsg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.extract_container_image">
+<code class="sig-name descname">extract_container_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">jobparams</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.extract_container_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.extract_container_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the container image from the job parameters if present, and remove it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jobparams</strong> – job parameters (string).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>updated job parameters (string), extracted image name (string).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.fileinfo">
+<code class="sig-name descname">fileinfo</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.fileinfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">defval</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporary Integration function to keep dict-based access for old logic in compatible way
+TO BE REMOVED ONCE all fields will be moved to Job object attributes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get_job_option_for_input_name">
+<code class="sig-name descname">get_job_option_for_input_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get_job_option_for_input_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get_job_option_for_input_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expecting something like <a class="reference external" href="mailto:--inputHitsFile=&#37;&#52;&#48;input_name">–inputHitsFile=<span>&#64;</span>input_name</a> in jobparams.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>job_option such as –inputHitsFile</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get_key_value">
+<code class="sig-name descname">get_key_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">catchall</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">'SOMEKEY'</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get_key_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get_key_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value corresponding to key in catchall.
+:param catchall: catchall free string.
+:param key: key name (string).
+:return: value (string).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get_kmap">
+<em class="property">static </em><code class="sig-name descname">get_kmap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get_kmap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get_kmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the kmap dictionary for server data to pilot conversions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>kmap (dict).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get_lfns_and_guids">
+<code class="sig-name descname">get_lfns_and_guids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get_lfns_and_guids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get_lfns_and_guids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return ordered lists with the input file LFNs and GUIDs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of input files, list of corresponding GUIDs.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get_max_workdir_size">
+<code class="sig-name descname">get_max_workdir_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get_max_workdir_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get_max_workdir_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the maximum disk space used by the payload.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>workdir size (int).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get_opts_pargs">
+<em class="property">static </em><code class="sig-name descname">get_opts_pargs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get_opts_pargs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get_opts_pargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the opts and pargs variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – input command line arguments (raw string)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>opts (dict), pargs (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get_ret">
+<em class="property">static </em><code class="sig-name descname">get_ret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">options</span></em>, <em class="sig-param"><span class="n">opts</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get_ret"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get_ret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ret variable from the options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – </p></li>
+<li><p><strong>opts</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ret (dict).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get_size">
+<code class="sig-name descname">get_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the size (B) of the job object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>size (int).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.get_status">
+<code class="sig-name descname">get_status</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.get_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.get_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value for the given key (e.g. LOG_TRANSFER) from the status dictionary.
+LOG_TRANSFER_NOT_DONE is returned if job object is not defined for key=’LOG_TRANSFER’.
+If no key is found, None will be returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – key name (string).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>corresponding key value in job.status dictionary (string).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.has_remoteio">
+<code class="sig-name descname">has_remoteio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.has_remoteio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.has_remoteio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check status of input file transfers and determine either direct access mode will be used or not.
+:return: True if at least one file should use direct access mode</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.homepackage">
+<code class="sig-name descname">homepackage</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.homepackage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.imagename">
+<code class="sig-name descname">imagename</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.imagename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.imagename_jobdef">
+<code class="sig-name descname">imagename_jobdef</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.imagename_jobdef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.indata">
+<code class="sig-name descname">indata</code><em class="property"> = []</em><a class="headerlink" href="#pilot.info.jobdata.JobData.indata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.infilesguids">
+<code class="sig-name descname">infilesguids</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.infilesguids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">infosys</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.init" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>infosys</strong> – infosys object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.is_analysis">
+<code class="sig-name descname">is_analysis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.is_analysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.is_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine whether the job is an analysis user job or not.
+:return: True in case of user analysis job</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.is_build_job">
+<code class="sig-name descname">is_build_job</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.is_build_job"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.is_build_job" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the job is a build job.
+(i.e. check if the job has an output file that is a lib file).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.is_eventservice">
+<code class="sig-name descname">is_eventservice</code><em class="property"> = False</em><a class="headerlink" href="#pilot.info.jobdata.JobData.is_eventservice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.is_eventservicemerge">
+<code class="sig-name descname">is_eventservicemerge</code><em class="property"> = False</em><a class="headerlink" href="#pilot.info.jobdata.JobData.is_eventservicemerge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.is_hpo">
+<code class="sig-name descname">is_hpo</code><em class="property"> = False</em><a class="headerlink" href="#pilot.info.jobdata.JobData.is_hpo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.is_local">
+<code class="sig-name descname">is_local</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.is_local"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.is_local" title="Permalink to this definition">¶</a></dt>
+<dd><p>Should the input files be accessed locally?
+Note: all input files will have storage_token set to local in that case.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>boolean.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.jobdefinitionid">
+<code class="sig-name descname">jobdefinitionid</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.jobdefinitionid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.jobid">
+<code class="sig-name descname">jobid</code><em class="property"> = None</em><a class="headerlink" href="#pilot.info.jobdata.JobData.jobid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.jobparams">
+<code class="sig-name descname">jobparams</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.jobparams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.jobsetid">
+<code class="sig-name descname">jobsetid</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.jobsetid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.load"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct and initialize data from ext source
+:param data: input dictionary of job data settings</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.logdata">
+<code class="sig-name descname">logdata</code><em class="property"> = []</em><a class="headerlink" href="#pilot.info.jobdata.JobData.logdata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.maxcpucount">
+<code class="sig-name descname">maxcpucount</code><em class="property"> = 0</em><a class="headerlink" href="#pilot.info.jobdata.JobData.maxcpucount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.memorymonitor">
+<code class="sig-name descname">memorymonitor</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.memorymonitor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.metadata">
+<code class="sig-name descname">metadata</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.metadata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.nevents">
+<code class="sig-name descname">nevents</code><em class="property"> = 0</em><a class="headerlink" href="#pilot.info.jobdata.JobData.nevents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.neventsw">
+<code class="sig-name descname">neventsw</code><em class="property"> = 0</em><a class="headerlink" href="#pilot.info.jobdata.JobData.neventsw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.noexecstrcnv">
+<code class="sig-name descname">noexecstrcnv</code><em class="property"> = None</em><a class="headerlink" href="#pilot.info.jobdata.JobData.noexecstrcnv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.only_copy_to_scratch">
+<code class="sig-name descname">only_copy_to_scratch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.only_copy_to_scratch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.only_copy_to_scratch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the payload only has copy-to-scratch input.
+In this case, there should be no –usePFCTurl or –directIn in the job parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if only copy-to-scratch. False if at least one file should use direct access mode</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.outdata">
+<code class="sig-name descname">outdata</code><em class="property"> = []</em><a class="headerlink" href="#pilot.info.jobdata.JobData.outdata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.overwrite_queuedata">
+<code class="sig-name descname">overwrite_queuedata</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.overwrite_queuedata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.overwrite_storagedata">
+<code class="sig-name descname">overwrite_storagedata</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.overwrite_storagedata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.parse_args">
+<em class="property">classmethod </em><code class="sig-name descname">parse_args</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">options</span></em>, <em class="sig-param"><span class="n">remove</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.parse_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.parse_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract option/values from string containing command line options (arguments)
+:param data: input command line arguments (raw string)
+:param options: dict of option names to be considered: (name, type), type is a cast function to be applied with result value
+:param remove: boolean, if True then exclude specified options from returned raw string of command line arguments
+:return: tuple: (dict of extracted options, raw string of final command line options)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.payload">
+<code class="sig-name descname">payload</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.payload" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.pgrp">
+<code class="sig-name descname">pgrp</code><em class="property"> = None</em><a class="headerlink" href="#pilot.info.jobdata.JobData.pgrp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.pid">
+<code class="sig-name descname">pid</code><em class="property"> = None</em><a class="headerlink" href="#pilot.info.jobdata.JobData.pid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.piloterrorcode">
+<code class="sig-name descname">piloterrorcode</code><em class="property"> = 0</em><a class="headerlink" href="#pilot.info.jobdata.JobData.piloterrorcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.piloterrorcodes">
+<code class="sig-name descname">piloterrorcodes</code><em class="property"> = []</em><a class="headerlink" href="#pilot.info.jobdata.JobData.piloterrorcodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.piloterrordiag">
+<code class="sig-name descname">piloterrordiag</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.piloterrordiag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.piloterrordiags">
+<code class="sig-name descname">piloterrordiags</code><em class="property"> = []</em><a class="headerlink" href="#pilot.info.jobdata.JobData.piloterrordiags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.platform">
+<code class="sig-name descname">platform</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.platform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.postprocess">
+<code class="sig-name descname">postprocess</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.postprocess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.prepare_infiles">
+<code class="sig-name descname">prepare_infiles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.prepare_infiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.prepare_infiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct FileSpec objects for input files from raw dict <a class="reference internal" href="../api/data.html#module-pilot.api.data" title="pilot.api.data"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">data</span></code></a>
+:return: list of validated <code class="xref any docutils literal notranslate"><span class="pre">FileSpec</span></code> objects</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.prepare_outfiles">
+<code class="sig-name descname">prepare_outfiles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.prepare_outfiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.prepare_outfiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct validated FileSpec objects for output and log files from raw dict <a class="reference internal" href="../api/data.html#module-pilot.api.data" title="pilot.api.data"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">data</span></code></a>
+Note: final preparation for output files can only be done after the payload has finished in case the payload
+has produced a job report with e.g. output file guids. This is verified in
+pilot/control/payload/process_job_report().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(list of <code class="xref any docutils literal notranslate"><span class="pre">FileSpec</span></code> for output, list of <code class="xref any docutils literal notranslate"><span class="pre">FileSpec</span></code> for log)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.preprocess">
+<code class="sig-name descname">preprocess</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.process_writetofile">
+<code class="sig-name descname">process_writetofile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.process_writetofile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.process_writetofile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expecting writetofile from the job definition.
+The format is ‘inputFor_file1:lfn1,lfn2^inputFor_file2:lfn3,lfn4’</p>
+<p>format writetofile_dictionary = {‘inputFor_file1’: [lfn1, lfn2], ‘inputFor_file2’: [lfn3, lfn4]}</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.processingtype">
+<code class="sig-name descname">processingtype</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.processingtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.produserid">
+<code class="sig-name descname">produserid</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.produserid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.reset_errors">
+<code class="sig-name descname">reset_errors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.reset_errors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.reset_errors" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.serverstate">
+<code class="sig-name descname">serverstate</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.serverstate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.set_accessmode">
+<code class="sig-name descname">set_accessmode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.set_accessmode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.set_accessmode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the accessmode field using jobparams.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.setup">
+<code class="sig-name descname">setup</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobdata.JobData.show_access_settings">
+<em class="property">static </em><code class="sig-name descname">show_access_settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">access_keys</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobdata.html#JobData.show_access_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobdata.JobData.show_access_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show access settings for the case job.infosys.queuedata is not initialized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>access_keys</strong> – list of access keys (list).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.sizes">
+<code class="sig-name descname">sizes</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.sizes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.stageout">
+<code class="sig-name descname">stageout</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.stageout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.state">
+<code class="sig-name descname">state</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.status">
+<code class="sig-name descname">status</code><em class="property"> = {'LOG_TRANSFER': 'NOT_DONE'}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.swrelease">
+<code class="sig-name descname">swrelease</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.swrelease" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.t0">
+<code class="sig-name descname">t0</code><em class="property"> = None</em><a class="headerlink" href="#pilot.info.jobdata.JobData.t0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.taskid">
+<code class="sig-name descname">taskid</code><em class="property"> = None</em><a class="headerlink" href="#pilot.info.jobdata.JobData.taskid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.transexitcode">
+<code class="sig-name descname">transexitcode</code><em class="property"> = 0</em><a class="headerlink" href="#pilot.info.jobdata.JobData.transexitcode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.transfertype">
+<code class="sig-name descname">transfertype</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.transfertype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.transformation">
+<code class="sig-name descname">transformation</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.transformation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.use_vp">
+<code class="sig-name descname">use_vp</code><em class="property"> = False</em><a class="headerlink" href="#pilot.info.jobdata.JobData.use_vp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.usecontainer">
+<code class="sig-name descname">usecontainer</code><em class="property"> = False</em><a class="headerlink" href="#pilot.info.jobdata.JobData.usecontainer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.utilities">
+<code class="sig-name descname">utilities</code><em class="property"> = {}</em><a class="headerlink" href="#pilot.info.jobdata.JobData.utilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.workdir">
+<code class="sig-name descname">workdir</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.workdir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.workdirsizes">
+<code class="sig-name descname">workdirsizes</code><em class="property"> = []</em><a class="headerlink" href="#pilot.info.jobdata.JobData.workdirsizes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.writetofile">
+<code class="sig-name descname">writetofile</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.writetofile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.zipmap">
+<code class="sig-name descname">zipmap</code><em class="property"> = ''</em><a class="headerlink" href="#pilot.info.jobdata.JobData.zipmap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobdata.JobData.zombies">
+<code class="sig-name descname">zombies</code><em class="property"> = []</em><a class="headerlink" href="#pilot.info.jobdata.JobData.zombies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Pilot 2</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">api components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common/index.html">common components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control/index.html">control components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../copytool/index.html">copytool components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eventservice/index.html">eventservice components</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">info components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource/index.html">resource components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user/index.html">user components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../util/index.html">util components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">workflow components</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Components</a><ul>
+  <li><a href="index.html">info components</a><ul>
+      <li>Previous: <a href="infoservice.html" title="previous chapter">infoservice</a></li>
+      <li>Next: <a href="jobinfo.html" title="next chapter">jobinfo</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/components/info/jobdata.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Paul Nilsson, Mario Lassnig, Daniil Drizhuk, ....
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/components/info/jobdata.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

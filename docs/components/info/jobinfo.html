@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jobinfo &#8212; Pilot 2  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="jobinfoservice" href="jobinfoservice.html" />
+    <link rel="prev" title="jobdata" href="jobdata.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pilot.info.jobinfo">
+<span id="jobinfo"></span><h1>jobinfo<a class="headerlink" href="#module-pilot.info.jobinfo" title="Permalink to this headline">¶</a></h1>
+<p>Job specific info provider mainly used to customize Queue, Site, etc data of Information Service
+with details fetched directly from Job instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">author</dt>
+<dd class="field-odd"><p>Alexey Anisenkov</p>
+</dd>
+<dt class="field-even">contact</dt>
+<dd class="field-even"><p><a class="reference external" href="mailto:anisyonk&#37;&#52;&#48;cern&#46;ch">anisyonk<span>&#64;</span>cern<span>&#46;</span>ch</a></p>
+</dd>
+<dt class="field-odd">date</dt>
+<dd class="field-odd"><p>January 2018</p>
+</dd>
+</dl>
+<dl class="py class">
+<dt id="pilot.info.jobinfo.JobInfoProvider">
+<em class="property">class </em><code class="sig-prename descclassname">pilot.info.jobinfo.</code><code class="sig-name descname">JobInfoProvider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">job</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobinfo.html#JobInfoProvider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobinfo.JobInfoProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Job info provider which is used to extract settings specific for given Job
+and overwrite general configuration used by Information Service</p>
+<dl class="py attribute">
+<dt id="pilot.info.jobinfo.JobInfoProvider.__dict__">
+<code class="sig-name descname">__dict__</code><em class="property"> = mappingproxy({'__module__': 'pilot.info.jobinfo', '__doc__': '\n        Job info provider which is used to extract settings specific for given Job\n        and overwrite general configuration used by Information Service\n    ', 'job': None, '__init__': &lt;function JobInfoProvider.__init__&gt;, 'resolve_schedconf_sources': &lt;function JobInfoProvider.resolve_schedconf_sources&gt;, 'resolve_queuedata': &lt;function JobInfoProvider.resolve_queuedata&gt;, 'resolve_storage_data': &lt;function JobInfoProvider.resolve_storage_data&gt;, '__dict__': &lt;attribute '__dict__' of 'JobInfoProvider' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'JobInfoProvider' objects&gt;})</em><a class="headerlink" href="#pilot.info.jobinfo.JobInfoProvider.__dict__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobinfo.JobInfoProvider.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">job</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobinfo.html#JobInfoProvider.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobinfo.JobInfoProvider.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobinfo.JobInfoProvider.__module__">
+<code class="sig-name descname">__module__</code><em class="property"> = 'pilot.info.jobinfo'</em><a class="headerlink" href="#pilot.info.jobinfo.JobInfoProvider.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobinfo.JobInfoProvider.__weakref__">
+<code class="sig-name descname">__weakref__</code><a class="headerlink" href="#pilot.info.jobinfo.JobInfoProvider.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pilot.info.jobinfo.JobInfoProvider.job">
+<code class="sig-name descname">job</code><em class="property"> = None</em><a class="headerlink" href="#pilot.info.jobinfo.JobInfoProvider.job" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobinfo.JobInfoProvider.resolve_queuedata">
+<code class="sig-name descname">resolve_queuedata</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pandaqueue</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobinfo.html#JobInfoProvider.resolve_queuedata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobinfo.JobInfoProvider.resolve_queuedata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve Job specific settings for queue data (overwriteQueueData)
+:return: dict of settings for given PandaQueue as a key</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobinfo.JobInfoProvider.resolve_schedconf_sources">
+<code class="sig-name descname">resolve_schedconf_sources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobinfo.html#JobInfoProvider.resolve_schedconf_sources"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobinfo.JobInfoProvider.resolve_schedconf_sources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve Job specific prioritized list of source names to be used for SchedConfig data load
+:return: prioritized list of source names</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pilot.info.jobinfo.JobInfoProvider.resolve_storage_data">
+<code class="sig-name descname">resolve_storage_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ddmendpoints</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pilot/info/jobinfo.html#JobInfoProvider.resolve_storage_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pilot.info.jobinfo.JobInfoProvider.resolve_storage_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve Job specific settings for storage data (including data passed via –overwriteStorageData)
+:return: dict of settings for requested DDMEndpoints with ddmendpoin as a key</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Pilot 2</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">api components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common/index.html">common components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control/index.html">control components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../copytool/index.html">copytool components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eventservice/index.html">eventservice components</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">info components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resource/index.html">resource components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user/index.html">user components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../util/index.html">util components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/index.html">workflow components</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Components</a><ul>
+  <li><a href="index.html">info components</a><ul>
+      <li>Previous: <a href="jobdata.html" title="previous chapter">jobdata</a></li>
+      <li>Next: <a href="jobinfoservice.html" title="next chapter">jobinfoservice</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/components/info/jobinfo.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Paul Nilsson, Mario Lassnig, Daniil Drizhuk, ....
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/components/info/jobinfo.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
