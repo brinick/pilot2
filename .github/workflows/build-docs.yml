@@ -16,5 +16,9 @@ jobs:
               run: pip install sphinx
 
             - name: Run make
-              run: cd ./doc && make html
+              run: cd ./doc && make github
+
+            - name: Commit changes
+              run: pwd
+
 
