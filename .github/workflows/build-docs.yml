@@ -25,9 +25,9 @@ jobs:
             - name: Pip install
               run: pip install sphinx
 
-            - name: Ensure sphinx-build
-              run: python -c "import sphinx;print(sphinx.__version__)" && which sphinx-build
+            - name: Check sphinx version
+              run: python -c "import sphinx;print(sphinx.__version__)"
 
-            - name: Run make
+            - name: Create html docs
               run: cd ./doc && make html
 
