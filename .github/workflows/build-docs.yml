@@ -1,6 +1,6 @@
 name: build-docs-workflow
 on:
-    pull_request:
+    push:
         branches:
             - master
 jobs:
@@ -32,5 +32,5 @@ jobs:
               run: cd ./doc && make github
 
             - name: Commit changes
-              run: pwd
+              run: git add docs && git commit -m "Adding documentation" && git push origin master
 
