@@ -37,12 +37,14 @@ jobs:
                   ls -lah
                   pip freeze
                   flake8 --help
+                  flake8 --version
                   if [[ ${{ env.FLAKE8_CONFIG }} != ".flake8" ]]; then rm .flake8; fi
 
             - name: Run flake8
               run: |
                   pwd
                   which flake8
+                  flake8 --version
                   flake8 --config ${{ env.FLAKE8_CONFIG}} pilot.py pilot/
 
             # Run the tests
