@@ -40,7 +40,10 @@ jobs:
                   if [[ ${{ env.FLAKE8_CONFIG }} != ".flake8" ]]; then rm .flake8; fi
 
             - name: Run flake8
-              run: flake8 --config ${{ env.FLAKE8_CONFIG}} pilot.py pilot/
+              run: |
+                  pwd
+                  which flake8
+                  flake8 --config ${{ env.FLAKE8_CONFIG}} pilot.py pilot/
 
             # Run the tests
             - name: Run unit tests
