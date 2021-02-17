@@ -10,9 +10,9 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                python-version: ['2.7', '3.7']
+                python-version: ['2.7', '3.6', '3.7']
         env:
-            FLAKE8_VERSION: "<=3.5.0"
+            FLAKE8_VERSION: "==3.8.4"
             FLAKE8_CONFIG: ".flake8"
         steps:
             # Checkout the source code
@@ -28,7 +28,7 @@ jobs:
 
             # Pip install
             - name: Pip install
-              run: pip install unittest2 "flake8${{ env.FLAKE8_VERSION }}" pep8-naming flake8-blind-except
+              run: pip install unittest2 "flake8${{ env.FLAKE8_VERSION }}" 'pep8-naming' 'flake8-blind-except'
 
             # Prep
             - name: Setup env
@@ -36,16 +36,11 @@ jobs:
                   pwd
                   ls -lah
                   pip freeze
-                  flake8 --help
                   flake8 --version
                   if [[ ${{ env.FLAKE8_CONFIG }} != ".flake8" ]]; then rm .flake8; fi
 
             - name: Run flake8
-              run: |
-                  pwd
-                  which flake8
-                  flake8 --version
-                  flake8 --config ${{ env.FLAKE8_CONFIG}} pilot.py pilot/
+              run: flake8 --config ${{ env.FLAKE8_CONFIG}} pilot.py pilot/
 
             # Run the tests
             - name: Run unit tests
